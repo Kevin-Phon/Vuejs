@@ -3,15 +3,11 @@ const app = Vue.createApp({
         return{
             title : "Vuejs",
             author : "Kevin",
-            age : 23
+            age : 23,
+            showBook : true
         }
     },
 
-    // methods:{
-    //     IncreaseAge(){
-    //         this.age++
-    //     }
-    // }
 });
 
 app.mount("#app");

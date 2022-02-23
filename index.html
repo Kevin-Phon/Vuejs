@@ -11,19 +11,29 @@
 <body>
     <h1>Vuejs Learning</h1>
     <div id="app">
-        <h2>{{title}}</h2>
-        <h4>Author name - {{author}}</h4>
-        <h4>Age - {{age}}</h4>
-        
-        <!-- one way (with method)-->
-        <!-- <button v-on:click="IncreaseAge">Increase Age</button> -->
 
-        <!-- another way -->
-        <button v-on:click="age++">Increase Age</button><br>
+        <div v-if="showBook">
+            <h2>{{title}}</h2>
+            <h4>Author name - {{author}}</h4>
+            <h4>Age - {{age}}</h4>
+        </div>
 
-        <button v-on:click="author='KayAs'">Change Name</button><br>
-        <button v-on:click="title='Pro Gaming Basics'">Change Book Name</button>
+        <!-- one way (not dynamic)-->
+        <!-- <button @click="showBook=false">hide book</button>
+        <button @click="showBook=true">show book</button> -->
 
+        <!-- another way (a little dynamic)-->
+        <!-- <button @click="showBook=!showBook">Toggle button</button> -->
+
+        <!-- another way (dynamic) -->
+        <button @click="showBook=!showBook">
+
+            <!-- <span v-if="showBook==true">hide book</span> -->
+            <span v-if="showBook">hide book</span> 
+
+            <!-- <span v-if="showBook==false">show book</span> -->
+            <span v-if="!showBook">show book</span>
+        </button>
     </div>
 
     <script src="app.js"></script>
