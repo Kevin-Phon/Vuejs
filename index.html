@@ -14,6 +14,16 @@
         <h2>{{title}}</h2>
         <h4>Author name - {{author}}</h4>
         <h4>Age - {{age}}</h4>
+        
+        <!-- one way (with method)-->
+        <!-- <button v-on:click="IncreaseAge">Increase Age</button> -->
+
+        <!-- another way -->
+        <button v-on:click="age++">Increase Age</button><br>
+
+        <button v-on:click="author='KayAs'">Change Name</button><br>
+        <button v-on:click="title='Pro Gaming Basics'">Change Book Name</button>
+
     </div>
 
     <script src="app.js"></script>

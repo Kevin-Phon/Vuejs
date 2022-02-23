@@ -5,7 +5,13 @@ const app = Vue.createApp({
             author : "Kevin",
             age : 23
         }
-    }
+    },
+
+    // methods:{
+    //     IncreaseAge(){
+    //         this.age++
+    //     }
+    // }
 });
 
 app.mount("#app");
