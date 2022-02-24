@@ -21,7 +21,8 @@ const app = Vue.createApp({
                     language : "English"
                 }
             ],
-            showBook : true
+            showBook : true,
+            link : "http://www.youtube.com"
         }
     },
 
