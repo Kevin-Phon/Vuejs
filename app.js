@@ -1,26 +1,29 @@
 const app = Vue.createApp({
     data(){
         return{
-            title : "Vuejs",
-            author : "Kevin",
-            age : 23,
+            books:[
+                {
+                    title : "Vuejs",
+                    author : "Kevin",
+                    age : 23,
+                    language : "American"
+                },
+                {
+                    title : "Pro Gaming",
+                    author : "KayAs",
+                    age : 28,
+                    language : "Chinese"
+                },
+                {
+                    title : "How To Live",
+                    author : "KyawSwa",
+                    age : 32,
+                    language : "English"
+                }
+            ],
             showBook : true
         }
     },
-
-    methods:{
-        mouseoverHandler(event,data){
-            console.log("Mouse over is working!",event.type,data)
-        },
-                    //enent is default
-        mouseleaveHandler(){
-            console.log("Mouse leaving!",event.type)
-        },
-
-        doubleclickHandler(event){
-            console.log("Double ckick working!",event.type)
-        }
-    }
 
 });
 
