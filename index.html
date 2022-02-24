@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vuejs Learning</title>
 
+    <style>
+        .box{
+            background-color: aqua;
+            padding: 100px;
+            margin: 30px;
+            display: inline-block;
+        }
+    </style>
+
     <script src="https://unpkg.com/vue@3.0.2"></script>
 </head>
 <body>
@@ -18,22 +27,15 @@
             <h4>Age - {{age}}</h4>
         </div>
 
-        <!-- one way (not dynamic)-->
-        <!-- <button @click="showBook=false">hide book</button>
-        <button @click="showBook=true">show book</button> -->
-
-        <!-- another way (a little dynamic)-->
-        <!-- <button @click="showBook=!showBook">Toggle button</button> -->
-
-        <!-- another way (dynamic) -->
         <button @click="showBook=!showBook">
-
-            <!-- <span v-if="showBook==true">hide book</span> -->
             <span v-if="showBook">hide book</span> 
-
-            <!-- <span v-if="showBook==false">show book</span> -->
             <span v-if="!showBook">show book</span>
-        </button>
+        </button><br>
+                                        <!-- if two parameters add $enent -->
+        <div class="box" @mouseover="mouseoverHandler($event,'data')">Mouse over</div>
+        <div class="box" @mouseleave="mouseleaveHandler">Mouse leave</div>
+        <div class="box" @dblclick="doubleclickHandler">Double click</div>
+
     </div>
 
     <script src="app.js"></script>

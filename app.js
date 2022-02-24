@@ -8,6 +8,20 @@ const app = Vue.createApp({
         }
     },
 
+    methods:{
+        mouseoverHandler(event,data){
+            console.log("Mouse over is working!",event.type,data)
+        },
+                    //enent is default
+        mouseleaveHandler(){
+            console.log("Mouse leaving!",event.type)
+        },
+
+        doubleclickHandler(event){
+            console.log("Double ckick working!",event.type)
+        }
+    }
+
 });
 
 app.mount("#app");
