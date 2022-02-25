@@ -7,11 +7,11 @@
     <title>Vuejs Learning</title>
 
     <style>
-        .box{
-            background-color: aqua;
-            padding: 100px;
-            margin: 30px;
-            display: inline-block;
+        li{
+            list-style: none;
+        }
+        .favourite{
+            background-color: grey;
         }
     </style>
 
@@ -22,12 +22,15 @@
     <div id="app">
 
         <div v-if="showBook">
-            <div v-for="book in books">
-                <h2>Book name - {{book.title}}</h2>
-                <h4>Author name - {{book.author}}</h4>
-                <h4>Age - {{book.age}}</h4>
-                <h4>Language - {{book.language}}</h4><hr>
-            </div>
+            <ul v-for="book in books">
+                <li :class="{favourite:book.isFav}">
+                    <img :src="book.image" width="300" height="200">
+                    <h2>Book name - {{book.title}}</h2>
+                    <h4>Author name - {{book.author}}</h4>
+                    <h4>Age - {{book.age}}</h4>
+                    <h4>Language - {{book.language}}</h4><hr>
+                </li>
+            </ul>
         </div>
 
         <button @click="showBook=!showBook">
@@ -35,9 +38,6 @@
             <span v-if="!showBook">show book</span>
         </button> <br>
 
-    <!-- (v-bind:) -->
-        <a :href="link">YouTube</a>
-        
     </div>
 
     <script src="app.js"></script>

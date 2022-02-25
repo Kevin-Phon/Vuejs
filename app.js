@@ -3,26 +3,32 @@ const app = Vue.createApp({
         return{
             books:[
                 {
-                    title : "Vuejs",
+                    title : "One Piece",
                     author : "Kevin",
                     age : 23,
-                    language : "American"
+                    language : "American",
+                    image : "images/one piece.jpg",
+                    isFav : true
                 },
                 {
-                    title : "Pro Gaming",
+                    title : "One Piece After Two Years ",
                     author : "KayAs",
                     age : 28,
-                    language : "Chinese"
+                    language : "Chinese",
+                    image : "images/op.jpg",
+                    isFav : false
                 },
                 {
-                    title : "How To Live",
+                    title : "Pokemon (Sun and Moon)",
                     author : "KyawSwa",
                     age : 32,
-                    language : "English"
+                    language : "English",
+                    image : "images/sun_moon.jpg",
+                    isFav : true
                 }
             ],
             showBook : true,
-            link : "http://www.youtube.com"
+            
         }
     },
 
