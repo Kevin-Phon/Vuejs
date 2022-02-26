@@ -22,8 +22,7 @@
     <div id="app">
 
         <div v-if="showBook">
-            <ul v-for="book in books">
-                                                     <!-- "book.isFav=!book.isFav" -->
+            <ul v-for="book in filteredBooks">
                 <li :class="{favourite:book.isFav}" @click="clickHandler(book)">
                     <img :src="book.image" width="300" height="200">
                     <h2>Book name - {{book.title}}</h2>

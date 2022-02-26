@@ -37,6 +37,15 @@ const app = Vue.createApp({
         clickHandler(book){
             book.isFav=!book.isFav
         }
+    },
+
+    computed:{
+        filteredBooks(){
+            // coz of object so use 'this'
+            return this.books.filter(book=>{
+                return book.isFav
+            })
+        }
     }
 
 });
