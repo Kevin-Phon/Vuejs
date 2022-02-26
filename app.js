@@ -30,7 +30,14 @@ const app = Vue.createApp({
             showBook : true,
             
         }
+        
     },
+
+    methods:{
+        clickHandler(book){
+            book.isFav=!book.isFav
+        }
+    }
 
 });
 
